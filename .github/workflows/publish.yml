@@ -9,6 +9,7 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    
     steps:
       - uses: actions/checkout@v3
 
@@ -25,5 +26,10 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           VITE_GOOGLE_CLIENT_ID: ${{ secrets.GCLIENT }}
-    if: always()
+          
+      - name: Upload AppImage artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: appimage
+          path: ./dist/linux-better-chatgpt-*.AppImage
 
