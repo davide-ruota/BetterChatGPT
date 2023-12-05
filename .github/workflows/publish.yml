@@ -31,5 +31,5 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: appimage
-          path: ./dist/linux-better-chatgpt-*.AppImage
+          path: ./release/linux-better-chatgpt-*.AppImage
 
