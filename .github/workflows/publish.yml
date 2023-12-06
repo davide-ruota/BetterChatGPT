@@ -28,8 +28,7 @@ jobs:
           VITE_GOOGLE_CLIENT_ID: ${{ secrets.GCLIENT }}
           
       - name: Upload AppImage artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: appimage
           path: ./release/linux-better-chatgpt-*.AppImage
-
